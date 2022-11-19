@@ -1,3 +1,4 @@
+'use strict';
 // davaleba 1
 function getNameAndYear() {
     fetch('https://reqres.in/api/unknown', {
