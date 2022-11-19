@@ -18,7 +18,10 @@ function getNameAndYear() {
     
             document.getElementById('fetch-ul').appendChild(li);
         });
-    });
+    })
+    .catch(function() {
+
+    })
 }
 getNameAndYear();
 
