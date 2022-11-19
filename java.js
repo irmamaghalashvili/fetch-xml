@@ -18,11 +18,19 @@ function getNameAndYear() {
             document.getElementById('fetch-ul').appendChild(li);
         });
     });
-    .catch(function(){
-    });
+    .catch(function (error) {
+        if (error == 404) {
+          let p = document.createElement("p");
+          p.textContent = "Page Not FOund";
+          document.getElementById("api-users").appendChild(p);
+        } else if (error == 500) {
+          let p = document.createElement("p");
+          p.textContent = "Server Error";
+          document.getElementById("api-users").appendChild(p);
+        }
+      });
 }
 getNameAndYear();
-
 
 // davaleba 2
 let currentPage = 1;
